@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SteamTable</string>
+    <string-array name="property1">
+        <item>Pressure</item>
+        <item>Temperature</item>
+    </string-array>
+    <string-array name="property2">
+        <item>Enthalpy</item>
+        <item>Entropy</item>
+        <item>x</item>
+        <item>specificvolume</item>
+        <item>Internalenergy</item>
+    </string-array>
+
+</resources>
