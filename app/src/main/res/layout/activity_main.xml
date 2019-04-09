@@ -7,40 +7,82 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical">
-
-
-
     <Spinner
-        
+
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:id="@+id/spinner1"
-        android:tooltipText="Property1">
-
+        android:layout_marginLeft="@dimen/left"
+        android:layout_marginRight="@dimen/right"
+        android:layout_marginTop="@dimen/top"
+        android:layout_marginBottom="@dimen/bottom"
+        android:tooltipText="Property1"
+        >
     </Spinner>
-
-    <EditText
-        android:layout_width="550dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:hint="Enter  property1"/>
-    <TextView
-        android:id="@+id/textView2"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:layout_marginBottom="10dp"
-        />
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/left"
+        android:layout_marginRight="@dimen/right">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit1"
+            android:hint="Enter the value"
+           />
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="bar"
+            android:gravity="center"
+            android:id="@+id/units"
+            android:textSize="20dp"
+            android:layout_marginRight="5dp"/>
+
+    </LinearLayout>
+    <Spinner
+
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:id="@+id/spinner2"
+        android:layout_marginLeft="@dimen/left"
+        android:layout_marginRight="@dimen/right"
+        android:layout_marginTop="@dimen/top"
+        android:tooltipText="Property1"
+        >
+    </Spinner>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/left"
+        android:layout_marginRight="@dimen/right">
+        <EditText
+            android:layout_width="0dp"
+            android:id="@+id/edit2"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Enter the value"/>
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="KJ/kg"
+            android:gravity="center"
+            android:id="@+id/unit2"
+            android:textSize="20dp"
+            android:layout_marginRight="5dp"/>
+
+    </LinearLayout>
 
 
 
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="50dp"
 
 
-        android:hint="Enter property2" />
+
+
+
 
     <Button
         android:layout_width="wrap_content"
@@ -48,10 +90,7 @@
         android:text="Go"
         android:layout_marginLeft="150dp"
         android:layout_marginTop="30dp"
-
-
         />
-
 
 
 </LinearLayout>

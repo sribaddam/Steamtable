@@ -7,7 +7,7 @@
     <string-array name="property2">
         <item>Enthalpy</item>
         <item>Entropy</item>
-        <item>x</item>
+        <item>quality</item>
         <item>specificvolume</item>
         <item>Internalenergy</item>
     </string-array>
