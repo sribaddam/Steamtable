@@ -288,17 +288,20 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
 
             if (b == 0) {
-                if (value <= obj.getEnthalpy_gas()) {
+                if (value <= obj.getEnthalpy_gas() && value >= obj.getEnthalpy_liquid()) {
                     x = (value - obj.getEnthalpy_liquid()) / (obj.getEnthalpy_gas() - obj.getEnthalpy_liquid());
                     c = 1;
-                }
+                } else
+                    Toast.makeText(MainActivity.this, "Out of saturated region", Toast.LENGTH_SHORT).show();
             } else if (b == 1) {
-                Log.d("sri", "  value     " + value + "   obj  " + obj.getEntropy_gas());
+                Log.d("bip : ", "value   " + value + "     " + obj.getEntropy_gas());
                 if (value <= obj.getEntropy_gas()) {
                     x = (value - obj.getEntropy_liquid()) / (obj.getEntropy_gas() - obj.getEntropy_liquid());
                     c = 1;
-                }
+                } else
+                    Toast.makeText(MainActivity.this, "Out of saturated region", Toast.LENGTH_SHORT).show();
             } else if (b == 2) {
+                Log.d("val : ",""+value);
                 if(value>=0 && value<=1) {
                     x = value;
                     c = 1;
@@ -310,15 +313,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 if (value <= obj.getSpecific_volume_gas()) {
                     x = (value - obj.getSpecific_volume_liquid()) / (obj.getSpecific_volume_gas() - obj.getSpecific_volume_liquid());
                     c = 1;
-                }
-            } else {
+                } else
+                    Toast.makeText(MainActivity.this, "Out of saturated region", Toast.LENGTH_SHORT).show();
+            } else if (b == 4) {
                 if (value <= obj.getInternal_energy_gas()) {
                     x = (value - obj.getInternal_energy_liquid()) / (obj.getInternal_energy_gas() - obj.getInternal_energy_liquid());
                     c = 1;
-                }
+                } else
+                    Toast.makeText(MainActivity.this, "Out of saturated region", Toast.LENGTH_SHORT).show();
             }
+
             if (c == 1) {
-                z_press = pressure;
+                z_press = obj.getPressure();
                 z_temp = obj.getTemperature();
                 z_spec_vol = obj.getSpecific_volume_liquid() + x * (obj.getSpecific_volume_gas() - obj.getSpecific_volume_liquid());
                 z_int_energy = obj.getInternal_energy_liquid() + x * (obj.getInternal_energy_gas() - obj.getInternal_energy_liquid());
