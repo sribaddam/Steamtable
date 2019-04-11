@@ -1,97 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
     <Spinner
 
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
         android:id="@+id/spinner1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/left"
-        android:layout_marginRight="@dimen/right"
         android:layout_marginTop="@dimen/top"
-        android:layout_marginBottom="@dimen/bottom"
-        android:tooltipText="Property1"
-        >
-    </Spinner>
+        android:layout_marginRight="@dimen/right"
+        android:layout_marginBottom="10dp"
+        android:tooltipText="Property1"></Spinner>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginLeft="@dimen/left"
-        android:layout_marginRight="@dimen/right">
+        android:layout_marginRight="@dimen/right"
+        android:orientation="horizontal">
+
         <EditText
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
             android:id="@+id/edit1"
-            android:hint="Enter the value"
-           />
-        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:hint="Enter the value" />
+
+        <!--<TextView
+            android:id="@+id/units"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
-            android:text="bar"
+            android:layout_marginRight="5dp"
             android:gravity="center"
-            android:id="@+id/units"
-            android:textSize="20dp"
-            android:layout_marginRight="5dp"/>
+            android:text="bar"
+            android:textSize="20dp" />-->
+
+        <Spinner
+            android:id="@+id/spinner_unit1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></Spinner>
 
     </LinearLayout>
+
     <Spinner
 
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
         android:id="@+id/spinner2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/left"
-        android:layout_marginRight="@dimen/right"
         android:layout_marginTop="@dimen/top"
-        android:tooltipText="Property1"
-        >
-    </Spinner>
+        android:layout_marginRight="@dimen/right"
+        android:layout_marginBottom="10dp"
+        android:tooltipText="Property1"></Spinner>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginLeft="@dimen/left"
-        android:layout_marginRight="@dimen/right">
+        android:layout_marginRight="@dimen/right"
+        android:orientation="horizontal">
+
         <EditText
-            android:layout_width="0dp"
             android:id="@+id/edit2"
-            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Enter the value"/>
-        <TextView
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:hint="Enter the value" />
+
+       <!-- <TextView
+            android:id="@+id/unit2"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
-            android:text="KJ/kg"
+            android:layout_marginRight="5dp"
             android:gravity="center"
-            android:id="@+id/unit2"
-            android:textSize="20dp"
-            android:layout_marginRight="5dp"/>
+            android:text="KJ/kg"
+            android:textSize="20dp" />-->
+
+        <Spinner
+            android:id="@+id/spinner_unit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></Spinner>
 
     </LinearLayout>
-
-
-
-
-
-
-
 
 
     <Button
+        android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go"
-        android:layout_marginLeft="150dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
-        android:id="@+id/submit"
-        />
+        android:text="Go" />
 
 
 </LinearLayout>

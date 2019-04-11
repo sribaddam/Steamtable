@@ -7,9 +7,36 @@
     <string-array name="property2">
         <item>Enthalpy</item>
         <item>Entropy</item>
-        <item>quality</item>
-        <item>specificvolume</item>
-        <item>Internalenergy</item>
+        <item>Quality</item>
+        <item>Specific_volume</item>
+        <item>Internal_energy</item>
+    </string-array>
+    <string-array name="unit_temp">
+        <item>" \u2103"</item>
+        <item>" \u2109"</item>
+        <item>"K"</item>
+    </string-array>
+    <string-array name="unit_press">
+        <item>"atm"</item>
+        <item>"bar"</item>
+        <item>"kPa"</item>
+        <item>"mm-Hg"</item>
+        <item>"MPa"</item>
+        <item>"Pa"</item>
+    </string-array>
+    <string-array name="unit_spec_vol">
+        <item>"m3/kg"</item>
+        <item>"in3/lb"</item>
+        <item>"ft3/lb"</item>
+    </string-array>
+    <string-array name="unit_energy">
+        <item>"kcal/Kg"</item>
+        <item>"KJ/Kg"</item>
+    </string-array>
+    <string-array name="unit_entropy">
+        <item>"KJ/Kg-K"</item>
+        <item>"KJ/Kg-\u2103"</item>
+        <item>"Kcal/Kg-\u2103"</item>
     </string-array>
 
 </resources>
